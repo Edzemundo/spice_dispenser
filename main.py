@@ -23,7 +23,10 @@ def dispense(ingredient, amount):
     elif ingredient == ingredients[3]:
         mass[ingredients.index(ingredient)] -= amount
     
-    data[len(ingredients) + ingredients.index(ingredient)] = f"{mass[ingredients.index(ingredient)]}\n"
+    if ingredients.index(ingredient) < 3:
+        data[len(ingredients) + ingredients.index(ingredient)] = f"{mass[ingredients.index(ingredient)]}\n"
+    else:
+        data[len(ingredients) + ingredients.index(ingredient)] = f"{mass[ingredients.index(ingredient)]}"
     with open("data", "w") as datafile:
         datafile.writelines(data)
     

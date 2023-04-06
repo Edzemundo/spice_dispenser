@@ -122,6 +122,7 @@ def gui():
                         window["status1"].update("")
                         window["status2"].update("")
                         window["status3"].update("")
+                        state = [-1,0]
                         
 if __name__ == "__main__":
         refresh()
